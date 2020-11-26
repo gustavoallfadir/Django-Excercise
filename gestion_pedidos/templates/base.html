@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de gestion de pedidos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+</head>
+
+<body>
+    <header>
+        <img src="{% static '/media/logo.png' %}" alt="" 
+        style="width: 150px; float: right;">
+        
+        <h1>
+            Sistema de gestión de pedidos
+        </h1>
+        
+
+        <nav>
+            <ul>
+                <li><a href="/home/">Inicio</a></li>
+
+                <li><a href="/crear_pedido/">Crear pedido</a></li>
+
+                <li><a href="/urgentes/">Pedidos urgentes</a></li>
+
+                <li><a href="/api/">Acceso API</a></li>
+
+            </ul>
+        </nav>
+
+    </header>
+
+<section class="main">
+    
+    {% block content %}
+
+
+    {% endblock %}
+
+</section>
+
+    <br>
+
+    <footer class="footer">
+        <p>Sitio creado por Gustavo Allfadir</p>
+        <p>gustavo.allfadir@gmail.com</p>
+    </footer>
+
+</body>
+</html>

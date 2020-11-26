@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h2>Crear Pedido</h2>
+<br>
+
+{% if error_message %}
+    <p><strong>{{ error_message }}</strong></p>
+{% endif %}
+
+<div class="formulario">
+    
+    <form action="" method="POST">{% csrf_token %}
+        <table>
+            {{ form.as_table }}
+
+        </table>
+        
+        <input type="submit" value="Enviar" name="pedido" id="pedido"></inpu>
+
+    </form>
+
+</div>
+
+
+
+{% endblock %}

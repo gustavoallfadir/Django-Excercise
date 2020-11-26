@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h2>Pedidos urgentes</h2>
+<br>
+<p>
+    Los pedidos que aparecen listados en este apartado tienen las siguientes características:
+</p>
+<ul>
+    <li>Son pedidos de clase urgente</li>
+    <li>Pertenecen a clientes Platino</li>
+    <li>Son dirigidos a la central de distribución</li>
+    <li>Aún no han sido surtidos</li>
+</ul>
+
+{% if pedidos_urgentes %}
+
+    {% for pedido in pedidos_urgentes %}
+
+    <div class="pedido-urgente">
+        
+        <p>Cliente: {{pedido.cliente}}</p>
+        
+        <p>Articulo: {{pedido.articulo}}</p>
+    
+        <p>Cantidad: {{pedido.cantidad}}</p>
+
+        <p>Fecha de creación: {{pedido.created}}</p>
+
+        <p>Almacén que surte: {{pedido.codigo_almacen}}</p>
+
+    </div>
+    <br>
+    {% endfor %}
+
+{% else %}
+
+    <p>No se encontraron pedidos urgentes que cumplan con los requisitos.</p>
+
+{% endif %}
+
+
+{% endblock %}

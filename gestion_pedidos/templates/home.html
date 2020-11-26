@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h2>Inicio</h2>
+<br>
+
+<p>
+    Bienvenido al sistema de gestión de pedidos, por favor acceda a las 
+    funcionalidades del sitio a través de panel de navegación superior.
+</p>
+<br>
+
+    <ul>
+
+        <li>
+            En el apartado "Crear pedido" podrá registrar nuevos pedidos a
+            través de un formulario.
+        </li>
+        
+        <br>
+
+        <li>
+            En el apartado de pedidos urgentes podrá consultar aquellos pedidos 
+            de clientes Platino, designados para surtir desde Central de distribución 
+            y que aún no han sido entregados.
+        </li>
+
+        <br>
+
+        <li>
+            En el apartado Acceso API se puede acceder a los datos a través 
+            de un API REST. Este acceso es temporal y con funciones de prueba
+            y demostración.
+        </li>
+    </ul>
+
+{% endblock %}
